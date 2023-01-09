@@ -1,0 +1,115 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0px;
+    overflow: hidden;
+  
+    /* background-color: #333; */
+  }
+  body {
+    background-image: linear-gradient(135deg, #eee8e6 10%, #357cffea 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Open Sans", sans-serif;
+    
+    
+  }
+
+
+
+  .active {
+    /* reset */
+    /* styles */
+    position: relative;
+    background: linear-gradient(-45deg, #ffa9a9,#e7ee85,#99ff89,#edf1fc,#e1bfff);
+   background-size: 400% 400%;
+   animation: gradientBG 4.5s ease infinite;
+    transition: .3s;
+    border-style: groove;
+    border-radius: 2rem;
+    border-width: 0px;
+    color: black;
+ }
+
+ button{ position: relative;
+  background: linear-gradient(-45deg, #161618ad,#2c5061,#252c24,#6485db,#cdc5d4);
+ background-size: 400% 400%;
+ animation: gradientBG 4.5s ease infinite;
+  transition: .3s;
+  border-style: groove;
+  border-radius: 2rem;
+  border-width: 0px;
+  color: black;}
+ @keyframes gradientBG {
+   0% {
+     background-position: 0% 50%;
+   }
+   50% {
+     background-position: 100% 50%;
+   }
+   100% {
+     background-position: 0% 50%;
+   }
+ }
+ 
+  
+  li {
+    float: left;
+    width: 8rem;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 10px;
+  }
+  h3{font-size: 36px;}
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+  }
+  
+  li a:hover:not(.active) {
+    /* background-color: #6a8378; */
+    /* border: red; */
+    border-style: groove;
+    border-radius: 2rem;
+    border-width: 2px;
+    position: relative;
+    background: linear-gradient(-45deg, #ffa9a9,#e7ee85,#99ff89,#edf1fc,#e1bfff);
+   background-size: 400% 400%;
+   animation: gradientBG 4.5s ease infinite;
+    transition: .3s;
+    border-style: groove;
+    border-radius: 2rem;
+    border-width: 0px;
+    color: black;
+ }
+  
+ 
+
+  .title{
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin: 0%;
+    background-color: #dadada;
+    text-align: center;
+  }
+
+  .container{
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  
+.tb{
+    border-width: 2px 5px;
+}
+table, th,tr, td {
+    border: 0px solid rgba(0, 0, 0, 0.952);
+    border-collapse: collapse;
+  }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+    <ul>
+        <li style="float:right"><a  href="/login">Login</a></li>
+      </ul>
+      <h4>Registration Form</h4>
+      <div class="alert alert-warning alert-dismissible fade show "  id="alert" style="visibility: hidden; width: 10%;" role="alert">
+        <strong>Done!</strong> 
+        <button type="button" class="btn-close " id="close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <div>
+
+
+        <form method="post" action="/register">
+            
+            <div class="col-md-9" style="float: left;">
+                <div class="col-md-12">
+                    <label  class=" col-md-12"> <p style="float: left;padding-left: 2rem;" class="col-md-3"> Name:</p>
+                        <input type="text"  name="username" style="float: left;" class="col-md-7"    required>
+                    </label>
+                </div>
+            </div>
+                
+            
+            <div class="col-md-12" style="float: right;" >
+            <div class="col-md-9" style="float: left;">
+                
+                
+                <div class="col-md-12" style="float: left;">
+                    <div class="col-md-12">
+                        <label  class="col-md-12">  
+                            <p style="float: left;padding-left: 2rem;" class="col-md-3">Phone Number: </p>    
+                            <input type="text" name="phone" class="col-md-2" id="validationServer01" style="float: left;" required>
+                            
+                        </label>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label  class=" col-md-12"> <p style="float: left;padding-left: 2rem;" class="col-md-3"> Email Address:</p>
+                        <input type="text"  name="email" style="float: left;" class="col-md-7" required>
+                    </label>
+                </div>  
+                <div class="col-md-12">
+                    <label  class=" col-md-12"> <p style="float: left;padding-left: 2rem;" class="col-md-3"> Password:</p>
+                        <input type="text"  name="password" style="float: left;" class="col-md-7" required>
+                    </label>
+                    </div>
+            </div>
+                
+        </div>
+        </div>
+            <div class="col-12" style="float: left; padding-left: 30%;padding-right: 30%;">
+              <button class="btn btn-primary " id="save" type="submit">Save</button>
+              <button class="btn btn-primary" type="submit">clear</button>
+              <button class="btn btn-primary" type="submit">close</button>
+            </div>
+        </form>   
+      </div>
+      <script>
+         document.getElementById("save").addEventListener("click",myFunction)
+         document.getElementById("close").addEventListener("click",close)
+         document.getElementById("alert").style.visibility = 'hidden';
+        function myFunction(){
+            document.getElementById("alert").style.visibility = 'visible';
+        }
+        function close(){
+            document.getElementById("alert").style.visibility = 'hidden';
+        }
+      </script>
+</body>
+</html>

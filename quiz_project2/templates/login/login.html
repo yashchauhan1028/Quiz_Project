@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="logInStyle.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0e09881721.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <ul>
+        <li style="float:right"><a href="/register">Register</a></li>
+      </ul>
+      <div class="logIn" style="margin: 20px;">
+        <div class="login-form">
+            <form method="POST" action="/login">
+              <h1>Login</h1>
+               <div class="imgcontainer">
+                  <img src="https://img1.freepng.fr/20180331/ffe/kisspng-computer-icons-user-clip-art-user-5abf13dad7aed4.5909364715224718988835.jpg" alt="Avatar" class="avatar">
+              </div>
+              <div class="form-group">
+                <input type="text" name="email" placeholder="E-mail Address" required>
+                <span class="input-icon"><i class="fa fa-envelope"></i></span>
+              </div>
+              <div class="form-group">
+                <input type="text" name="psw" placeholder="Password" required>
+                <span class="input-icon"><i class="fa fa-lock"></i></span>
+              </div>      
+              <button class="login-btn" type="submit">Login</button>      
+              <a class="reset-psw" href="#">Forgot your password?</a>
+  
+            </form>
+          </div>
+      </div>
+</body>
+</html>

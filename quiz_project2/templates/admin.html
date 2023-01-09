@@ -1,0 +1,146 @@
+<html>
+
+<body>
+
+    <!-- / -->
+
+    <h1>Add MCQ</h1>
+    <form method="POST" action="/admin">
+
+        <input type="text" name="question">
+        <input type="text" name="option1">
+        <input type="text" name="option2">
+        <input type="text" name="option3">
+        <input type="text" name="option4">
+        <input type="text" name="answer">
+
+
+        <input type="submit" value="Add">
+
+    </form>
+
+    <h1>MCQ List</h1>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Question</th>
+                <th>Option1</th>
+                <th>Option2</th>
+                <th>Option3</th>
+                <th>Option4</th>
+                <th>Answer</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            {% for mcq in mcqList %}
+                <tr>
+                    <td>{{ mcq.question }}</td>
+                    <td>{{ mcq.option1 }}</td>
+                    <td>{{ mcq.option2 }}</td>
+                    <td>{{ mcq.option3 }}</td>
+                    <td>{{ mcq.option4 }}</td>
+                    <td>{{ mcq.answer }}</td>
+
+                </tr>    
+            {% endfor %}
+        </tbody>
+
+        
+    </table>
+
+    
+
+
+
+    <!-- /update -->
+    <h1>Update Section</h1>
+    <!-- {% for mcq in mcqList %}
+        <p>{{ mcq.title }}</p>
+        <form method="POST" action="./update">
+            <input type="hidden" name="old_title" value="{{mcq.title}}">
+            <input type="text" name="new_title" value="{{mcq.title}}">
+            <input type="submit" value="Update">
+        </form>
+    {% endfor %} -->
+    <table>
+        <thead>
+            <tr>
+                <th style="padding-left: 50px;">Question</th>
+                <th style="padding-left: 120px;">Option1</th>
+                <th style="padding-left: 120px;">Option2</th>
+                <th style="padding-left: 120px;">Option3</th>
+                <th style="padding-left: 120px;">Option4</th>
+                <th style="padding-left: 120px;">Answer</th>
+            </tr>
+        </thead>
+      
+    </table>
+
+    {% for mcq in mcqList %}
+    <form method="POST" action="./update">
+
+        <input type="hidden" name="old_question" value="{{mcq.question}}">
+        <!-- <input type="hidden" name="old_option1" value="{{mcq.option1}}" >
+        <input type="hidden" name="old_option2"value="{{mcq.option2}}">
+        <input type="hidden" name="old_option3"value="{{mcq.option3}}">
+        <input type="hidden" name="old_option4"value="{{mcq.option4}}">
+        <input type="text" name="old_answer" value="{{mcq.answer}}"> -->
+        <input type="text" name="new_question" value="{{mcq.question}}">
+        <input type="text" name="new_option1" value="{{mcq.option1}}" >
+        <input type="text" name="new_option2"value="{{mcq.option2}}">
+        <input type="text" name="new_option3"value="{{mcq.option3}}">
+        <input type="text" name="new_option4"value="{{mcq.option4}}">
+        <input type="text" name="new_answer" value="{{mcq.answer}}">
+        <input type="submit" value="Update">
+
+    </form>
+    {% endfor %}
+
+    <!-- /delete -->
+    <h1>Delete Section</h1>
+    {% for mcq in mcqList %}
+        <form action="./delete" method="POST">
+            <p>{{mcq.question}}
+            <input type="hidden" name="del_question" value="{{mcq.question}}">
+            <input type="submit" value="Delete">
+            </p>
+        </form>
+        
+    {% endfor %}
+
+    <h1>User Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>email</th>
+                <th>password</th>
+                <th>Phone Number</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            {% for user in userList %}
+                <tr>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.password }}</td>
+                    <td>{{ user.phone }}</td>
+                    <td>{{ user.result }}</td>
+
+                </tr>    
+            {% endfor %}
+        </tbody>
+
+        
+    </table>
+
+    
+</body>
+</html>
